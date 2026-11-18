@@ -203,11 +203,22 @@ main {
   margin-bottom: 0;
 }
 
+.molecule-figure {
+  margin: 0.4rem 0 0;
+}
+
 .molecule {
+  display: block;
   width: 100%;
   height: auto;
-  margin-top: 0.4rem;
   overflow: visible;
+}
+
+.molecule-figure figcaption {
+  margin-top: 0.7rem;
+  color: var(--muted);
+  font-size: 0.82rem;
+  line-height: 1.4;
 }
 
 .molecule .bond {
@@ -217,31 +228,15 @@ main {
   stroke-linecap: butt;
   stroke-dasharray: 1 1;
   stroke-dashoffset: 1;
-  animation: draw 1.3s cubic-bezier(0.3, 0.6, 0.3, 1) forwards;
-  animation-delay: calc(var(--i) * 60ms + 150ms);
-}
-
-.molecule .atom-bg {
-  fill: var(--bg);
+  animation: draw 1s cubic-bezier(0.3, 0.6, 0.3, 1) forwards;
+  animation-delay: calc(var(--i) * 40ms + 150ms);
 }
 
 .molecule .node {
   fill: var(--accent);
   opacity: 0;
   animation: appear 0.5s ease-out forwards;
-  animation-delay: 1.5s;
-}
-
-.molecule .atom-label {
-  fill: var(--accent);
-  font-family: var(--sans);
-  font-weight: 700;
-  font-size: 15px;
-  text-anchor: middle;
-  dominant-baseline: central;
-  opacity: 0;
-  animation: appear 0.5s ease-out forwards;
-  animation-delay: 1.3s;
+  animation-delay: 1.4s;
 }
 
 @keyframes draw {
@@ -429,7 +424,7 @@ footer {
     font-size: 1.18rem;
   }
 
-  .molecule {
+  .molecule-figure {
     max-width: 11rem;
     order: -1;
   }
@@ -454,8 +449,7 @@ footer {
     stroke-dashoffset: 0;
   }
 
-  .molecule .node,
-  .molecule .atom-label {
+  .molecule .node {
     animation: none;
     opacity: 1;
   }
@@ -466,7 +460,7 @@ footer {
     position: static;
   }
 
-  .molecule {
+  .molecule-figure {
     display: none;
   }
 }
