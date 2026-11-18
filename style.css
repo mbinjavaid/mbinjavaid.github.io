@@ -161,14 +161,6 @@ button:focus-visible {
   overflow-wrap: anywhere;
 }
 
-.lab {
-  margin: 1.25rem 0 0;
-  font-style: normal;
-  color: var(--muted);
-  font-size: 0.93rem;
-  line-height: 1.5;
-}
-
 .cv-button {
   display: inline-block;
   margin-top: 1.5rem;
@@ -384,7 +376,7 @@ footer {
   }
 
   .sidebar .portrait {
-    grid-row: 1 / span 4;
+    grid-row: 1 / span 3;
   }
 
   .sidebar h1 {
